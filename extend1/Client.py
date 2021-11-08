@@ -95,6 +95,8 @@ class Client:
 			self.total_time += time.time() - self.start_time
 
 		if self.total_time > 0:
+			print(self.total_data)
+			print(self.total_time)
 			dataRate = float(int(self.total_data)/int(self.total_time))
 			print("\n--------------------\nVideo Data Rate: " + str(dataRate) +"\n--------------------")
 			lossRate = float(self.num_frame_lost/self.frameNbr)
@@ -138,7 +140,7 @@ class Client:
 
 					if self.frameNbr + 1 != current_Frame_Number:
 						self.num_frame_lost += 1
-						print('-------------------------' + "\nLOSS 1 PACKET\n" + '---------------------------')	
+						print('-------------------------' + "\nLOSS PACKET\n" + '---------------------------')	
 
 					if current_Frame_Number > self.frameNbr:
 						self.frameNbr = current_Frame_Number

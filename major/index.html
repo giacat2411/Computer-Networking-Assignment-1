@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script type="text/javascript" src="https://flashphoner.com/downloads/builds/flashphoner_client/wcs_api-2.0/current/flashphoner.js"></script>
-        <script type="text/javascript" src="player-min.js"></script>
     </head>
-    <style>
-        .fp-Video {
-            border: 1px double black;
-            width: 322px;
-            height: 242px;
-        }
-        .display {
-            width: 100%;
-            height: 100%;
-            display: inline-block;
-        }
-        .display > video,
-        object {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-    <body onload="init_api()">
-        <div class="fp-Video">
-            <div id="play" class="display"></div>
-        </div>
-        <br />
-        <button id="playBtn">PLAY</button>
+    <body>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
+        </iframe>
+
+        <video width="320" height="240" src='./media/video.mp4' controls>
+        </video>
+
+        <embed src="./media/video.mp4" autostart="false" height="320" width="240" />
     </body>
 </html>
